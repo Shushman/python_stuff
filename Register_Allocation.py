@@ -9,21 +9,17 @@
     Line 1: Number of registers (registers are identified by integers, e.g., 1, 2, 3 …)
     Line 2: Number of temporaries (identified by characters, a, b, c, d …)
     Line 3: Number of edges in the liveness graph
-
     Every line after line 3: One edge of the liveness graph (e.g., a, b)
-
- 
+    
     Program output format: A text file, where:
     Column 1: temporaries identifiers
     Column 2: allocated register identifiers
-
     If no solution exists: Print “No solution exists.”
 
     The program implements DFS, DFS with forward checking, DFS with forward checking and MRV heuristic,
     DFS with forward checking and degree heuristic, and arc consistency.
-    
-    
 
+    ALL METHOD CALLS FOR THE SOLUTION ARE COMMENTED AT THE END. UNCOMMENT THE PARTICULAR METHOD TO TRY IT
 """
 
 import math
