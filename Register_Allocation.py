@@ -1,12 +1,28 @@
 """
 
-    This program solves the register allocation problem, given as part of the AI course for Autumn 2013-14
-    It takes input in the manner specified - the first line being the number of registers, the second being
-    the number of temporaries (identified by characters a to z), the third being the number of edges of the
-    graph and then the remaining lines after that specifying the end-points for each edge.
+    Problem: We are given a set of temporaries V (e.g., V = {a, b, c, d, e}), a set of available CPU registers R (e.g., R = {1, 2, 3} and a liveness graph (V,E) where V is the set of temporaries and E is the following edges, each edge representing the relation “live at the same time”. (e.g., E = {(a, b), (a, c), (b, c), (c, d), (d, a), (d, e), (e, a)}).
+
+    Assignment: Formalize a CSP that represents the problem instance above, and where the solutions represent assignments of all temporaries to CPU registers, such that no temporaries are adjacent in E.
+
+    Program input format: A text file, where:
+
+    Line 1: Number of registers (registers are identified by integers, e.g., 1, 2, 3 …)
+    Line 2: Number of temporaries (identified by characters, a, b, c, d …)
+    Line 3: Number of edges in the liveness graph
+
+    Every line after line 3: One edge of the liveness graph (e.g., a, b)
+
+ 
+    Program output format: A text file, where:
+    Column 1: temporaries identifiers
+    Column 2: allocated register identifiers
+
+    If no solution exists: Print “No solution exists.”
 
     The program implements DFS, DFS with forward checking, DFS with forward checking and MRV heuristic,
     DFS with forward checking and degree heuristic, and arc consistency.
+    
+    
 
 """
 
